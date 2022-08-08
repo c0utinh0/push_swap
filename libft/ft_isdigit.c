@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 10:17:48 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/08 16:30:59 by dcoutinh         ###   ########.fr       */
+/*   Created: 2022/05/16 09:21:58 by dcoutinh          #+#    #+#             */
+/*   Updated: 2022/06/02 13:39:28 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h> //REMOVER
-# include "libft/libft.h"
-
-typedef struct	s_node
+int	ft_isdigit(int c)
 {
-	int	data;
-	struct	s_node	*next;
-}	t_node;
-
-#endif
+	if (c >= '0' && '9' >= c)
+		return (1);
+	return (0);
+}

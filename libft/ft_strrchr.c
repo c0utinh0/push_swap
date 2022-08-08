@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 10:17:48 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/08 16:30:59 by dcoutinh         ###   ########.fr       */
+/*   Created: 2022/05/19 12:48:46 by dcoutinh          #+#    #+#             */
+/*   Updated: 2022/06/10 08:51:28 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h> //REMOVER
-# include "libft/libft.h"
-
-typedef struct	s_node
+char	*ft_strrchr(const char *str, int c)
 {
-	int	data;
-	struct	s_node	*next;
-}	t_node;
+	char	*m_str;
+	int		i;
 
-#endif
+	m_str = NULL;
+	i = ft_strlen((char *)str) + 1;
+	if (c == 0)
+		return ((char *)&str[--i]);
+	while (i--)
+	{
+		if (str[i] == (char)c)
+			return ((char *)&str[i]);
+	}
+	return (m_str);
+}

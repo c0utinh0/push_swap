@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_pf_putchar.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 10:17:48 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/08 16:30:59 by dcoutinh         ###   ########.fr       */
+/*   Created: 2022/07/06 09:38:27 by dcoutinh          #+#    #+#             */
+/*   Updated: 2022/07/06 10:43:52 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "ft_printf.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h> //REMOVER
-# include "libft/libft.h"
-
-typedef struct	s_node
+int	ft_pf_putchar(char c)
 {
-	int	data;
-	struct	s_node	*next;
-}	t_node;
-
-#endif
+	write(1, &c, 1);
+	return (1);
+}

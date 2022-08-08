@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 10:17:48 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/08 16:30:59 by dcoutinh         ###   ########.fr       */
+/*   Created: 2022/05/19 13:43:44 by dcoutinh          #+#    #+#             */
+/*   Updated: 2022/05/19 17:35:20 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h> //REMOVER
-# include "libft/libft.h"
-
-typedef struct	s_node
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	data;
-	struct	s_node	*next;
-}	t_node;
-
-#endif
+	while ((*s1 || *s2) && (n--))
+	{
+		if (((unsigned char)*s1 - (unsigned char)*s2) != 0)
+			return ((int)(unsigned char)*s1 - (unsigned char)*s2);
+		s1++;
+		s2++;
+	}
+	return (0);
+}

@@ -6,51 +6,56 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 14:22:21 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/08 11:41:49 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/08 16:39:57 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_node	*create_list()
+t_node	*ft_create_list()
 {
 	return	NULL;
 }
 
-void	print_list(t_node	*p)
+void	ft_print_list(t_node	*p)
 {
-	t_node	*q;
+	t_node	*node;
 
-	q = p;
-	while (q != NULL)
+	node = p;
+	while (node != NULL)
 	{
-		printf("%d -> ", q->data);
-		q = q->next;
+		ft_printf("%d -> ", node->data); //alterar
+		node = node->next;
 	}
-	printf("NULL\n");
+	ft_printf("NULL\n"); //alterar
 }
 
-void add_node(t_node	**p, int x)
+void	ft_add_node(t_node	**p, int x)
 {
-	t_node	*q;
+	t_node	*node;
 
-	q = (t_node*) malloc(sizeof(t_node));
-	if (q == NULL)
+	node = (t_node*) malloc(sizeof(t_node));
+	if (node == NULL)
 		exit(EXIT_FAILURE);
-	q->data = x;
-	q->next = *p;
-	*p = q;
+	node->data = x;
+	node->next = *p;
+	*p = node;
 }
+
+
+void	ft_insert_args(t_node	**p, char	*argv[], int argc)
+{
+	while (argc != 1)
+		ft_add_node(p, ft_atoi(argv[--argc])); //alterar
+}
+
 
 int	main(int argc, char	*argv[])
 {
-	t_node *L = create_list();
-	add_node(&L, 1);
-	print_list(L);
-	add_node(&L, 10);
-	print_list(L);
-	add_node(&L, 100);
-	print_list(L);
+	t_node *list = ft_create_list();
+
+	ft_insert_args(&list, argv, argc);
+	ft_print_list(list);
 
 	return (0);
 }

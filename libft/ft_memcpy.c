@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 10:17:48 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/08 16:30:59 by dcoutinh         ###   ########.fr       */
+/*   Created: 2022/05/17 09:06:39 by dcoutinh          #+#    #+#             */
+/*   Updated: 2022/06/02 11:25:24 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include <stdio.h>
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h> //REMOVER
-# include "libft/libft.h"
-
-typedef struct	s_node
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int	data;
-	struct	s_node	*next;
-}	t_node;
+	char	*m_dst;
 
-#endif
+	m_dst = (char *)dst;
+	if (dst == NULL && src == NULL && n)
+		return (dst);
+	while (n-- > 0)
+		*m_dst++ = *(char *)src++;
+	return (dst);
+}

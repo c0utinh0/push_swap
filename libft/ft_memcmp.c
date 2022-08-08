@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 10:17:48 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/08 16:30:59 by dcoutinh         ###   ########.fr       */
+/*   Created: 2022/05/24 11:17:03 by dcoutinh          #+#    #+#             */
+/*   Updated: 2022/06/02 11:36:20 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h> //REMOVER
-# include "libft/libft.h"
-
-typedef struct	s_node
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	data;
-	struct	s_node	*next;
-}	t_node;
+	char	*str1;
+	char	*str2;
 
-#endif
+	str1 = (char *)s1;
+	str2 = (char *)s2;
+	while (n--)
+	{
+		if (((unsigned char)*str1 - (unsigned char)*str2) != 0)
+			return ((int)(unsigned char)*str1 - (unsigned char)*str2);
+		str1++;
+		str2++;
+	}
+	return (0);
+}

@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 10:17:48 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/08 16:30:59 by dcoutinh         ###   ########.fr       */
+/*   Created: 2022/06/20 14:21:42 by dcoutinh          #+#    #+#             */
+/*   Updated: 2022/07/07 10:39:24 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "ft_printf.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h> //REMOVER
-# include "libft/libft.h"
-
-typedef struct	s_node
+int	ft_printf(const char *s, ...)
 {
-	int	data;
-	struct	s_node	*next;
-}	t_node;
+	va_list	params;
+	int		len;
 
-#endif
+	len = 0;
+	va_start(params, s);
+	while (*s != '\0')
+	{
+		if (*s == '%')
+		{
+			len += ft_choice_param(*++s, params);
+			s++;
+		}
+		else if ((*s != '%') && (*s != '\0'))
+		{
+			write(1, s++, 1);
+			len++;
+		}
+	}
+	va_end(params);
+	return (len);
+}

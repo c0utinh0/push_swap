@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 14:22:21 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/08 16:39:57 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/09 11:15:20 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ void	ft_print_list(t_node	*p)
 	node = p;
 	while (node != NULL)
 	{
-		ft_printf("%d -> ", node->data); //alterar
+		ft_printf("%d -> ", node->data);
 		node = node->next;
 	}
-	ft_printf("NULL\n"); //alterar
+	ft_printf("NULL\n");
 }
 
 void	ft_add_node(t_node	**p, int x)
@@ -37,25 +37,28 @@ void	ft_add_node(t_node	**p, int x)
 	node = (t_node*) malloc(sizeof(t_node));
 	if (node == NULL)
 		exit(EXIT_FAILURE);
-	node->data = x;
-	node->next = *p;
-	*p = node;
+	node->data = x; //Adiciona o valor de x no campo data do nodo
+	node->next = *p; //Aponta o node criado para o primeiro nodo
+	*p = node; //Faz o inicio da lista apontar para o nodo criado
+
 }
 
 
 void	ft_insert_args(t_node	**p, char	*argv[], int argc)
 {
 	while (argc != 1)
-		ft_add_node(p, ft_atoi(argv[--argc])); //alterar
+		ft_add_node(p, ft_atoi(argv[--argc]));
 }
 
 
 int	main(int argc, char	*argv[])
 {
-	t_node *list = ft_create_list();
+	t_node *stack_a; 
 
-	ft_insert_args(&list, argv, argc);
-	ft_print_list(list);
+	stack_a = ft_create_list();
+	ft_insert_args(&stack_a, argv, argc);
+	sa(&stack_a);
+	ft_print_list(stack_a);
 
 	return (0);
 }

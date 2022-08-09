@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 17:01:53 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/09 16:57:03 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/09 18:55:47 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,9 @@ void	sa(t_list	*list)
 	node_b->next = node_a;
 	write(1, "sa\n", 3);
 }
+
+void	pa(t_list	*list_a, t_list	*list_b)
+{
+	
+}
+

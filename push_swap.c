@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 14:22:21 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/09 17:27:34 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/09 18:06:40 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,17 @@ void	ft_insert_args(t_list	*list, char	*argv[], int argc)
 		ft_add_node(list, ft_atoi(argv[--argc]));
 }
 
+void ft_remove_node(t_list	*list)
+{
+	t_node	*node;
+
+	if (list == NULL) 
+		return ;
+	node = list->start;
+	list->start = list->start->next;
+	free(node);
+}
+
 int	main(int argc, char	*argv[])
 {
 	t_list stack_a;
@@ -53,6 +64,11 @@ int	main(int argc, char	*argv[])
 	stack_a.start = NULL;
 	stack_b.len = 0;
 	stack_b.start = NULL;
+
+	ft_insert_args(&stack_a, argv, argc);
+	ft_remove_node(&stack_a);
+	ft_print_list(&stack_a);
+
 
 /*
 	//TESTES SWAP

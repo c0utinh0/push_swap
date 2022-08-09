@@ -6,13 +6,23 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 17:01:53 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/08 17:22:39 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/09 16:57:03 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(t_node	**p)
+void	sa(t_list	*list)
 {
-	ft_print_list(p);
+	t_node	*node_a;
+	t_node	*node_b;
+
+	if (list->len < 2)
+		return ;
+	node_a = list->start;
+	node_b = list->start->next;
+	list->start = node_b;
+	node_a->next = node_b->next;
+	node_b->next = node_a;
+	write(1, "sa\n", 3);
 }

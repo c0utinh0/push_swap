@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   operations_b.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 10:17:48 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/09 17:14:13 by dcoutinh         ###   ########.fr       */
+/*   Created: 2022/08/09 16:52:28 by dcoutinh          #+#    #+#             */
+/*   Updated: 2022/08/09 16:57:30 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include "libft/libft.h"
-
-typedef struct	s_node
+void	sb(t_list	*list)
 {
-	int	data;
-	struct	s_node	*next;
-}	t_node;
+	t_node	*node_a;
+	t_node	*node_b;
 
-typedef struct	s_list
-{
-	int	len;
-	t_node	*start;
-}	t_list;
-
-void	sa(t_list	*list);
-void	sb(t_list	*list);
-void	ss(t_list	*list_a, t_list	*list_b);
-void	ft_print_list(t_list	*list);
-
-
-
-#endif
+	if (list->len < 2)
+		return ;
+	node_a = list->start;
+	node_b = list->start->next;
+	list->start = node_b;
+	node_a->next = node_b->next;
+	node_b->next = node_a;
+	write(1, "sb\n", 3);
+}

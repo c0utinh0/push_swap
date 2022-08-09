@@ -6,7 +6,7 @@
 #    By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/08 16:32:52 by dcoutinh          #+#    #+#              #
-#    Updated: 2022/08/08 17:06:15 by dcoutinh         ###   ########.fr        #
+#    Updated: 2022/08/09 17:15:13 by dcoutinh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,8 @@ CFLAGS = -Wall -Wextra -Werror
 
 SRCS =  push_swap.c	\
 		operations_a.c	\
+		operations_b.c	\
+		operations_ab.c	\
 
 
 OBJS = $(SRCS:.c=.o)

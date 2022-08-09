@@ -6,22 +6,17 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 14:22:21 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/09 11:15:20 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/09 17:27:34 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_node	*ft_create_list()
-{
-	return	NULL;
-}
-
-void	ft_print_list(t_node	*p)
+void	ft_print_list(t_list	*list)
 {
 	t_node	*node;
 
-	node = p;
+	node = list->start;
 	while (node != NULL)
 	{
 		ft_printf("%d -> ", node->data);
@@ -30,7 +25,7 @@ void	ft_print_list(t_node	*p)
 	ft_printf("NULL\n");
 }
 
-void	ft_add_node(t_node	**p, int x)
+void	ft_add_node(t_list	*list, int x)
 {
 	t_node	*node;
 
@@ -38,27 +33,38 @@ void	ft_add_node(t_node	**p, int x)
 	if (node == NULL)
 		exit(EXIT_FAILURE);
 	node->data = x; //Adiciona o valor de x no campo data do nodo
-	node->next = *p; //Aponta o node criado para o primeiro nodo
-	*p = node; //Faz o inicio da lista apontar para o nodo criado
-
+	node->next = list->start; //Aponta o node criado para o primeiro nodo
+	list->start = node; //Faz o inicio da lista apontar para o nodo criado
+	list->len++;
 }
 
-
-void	ft_insert_args(t_node	**p, char	*argv[], int argc)
+void	ft_insert_args(t_list	*list, char	*argv[], int argc)
 {
 	while (argc != 1)
-		ft_add_node(p, ft_atoi(argv[--argc]));
+		ft_add_node(list, ft_atoi(argv[--argc]));
 }
-
 
 int	main(int argc, char	*argv[])
 {
-	t_node *stack_a; 
+	t_list stack_a;
+	t_list stack_b;
 
-	stack_a = ft_create_list();
+	stack_a.len = 0;
+	stack_a.start = NULL;
+	stack_b.len = 0;
+	stack_b.start = NULL;
+
+/*
+	//TESTES SWAP
 	ft_insert_args(&stack_a, argv, argc);
+	ft_insert_args(&stack_b, argv, argc);
+	ss(&stack_a, &stack_b);
+	ft_print_list(&stack_a);
+	ft_print_list(&stack_b);
 	sa(&stack_a);
-	ft_print_list(stack_a);
-
+	sb(&stack_b);
+	ft_print_list(&stack_a);
+	ft_print_list(&stack_b);
+*/
 	return (0);
 }

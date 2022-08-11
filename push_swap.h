@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 10:17:48 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/09 18:55:12 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/11 17:39:55 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,9 @@ void	sb(t_list	*list);
 void	ss(t_list	*list_a, t_list	*list_b);
 void	ft_print_list(t_list	*list);
 void	pa(t_list	*list_a, t_list	*list_b);
-
-
-
+void	pb(t_list	*list_a, t_list	*list_b);
+void	ra(t_list	*list);
+void	rb(t_list	*list);
+void	rr(t_list	*list_a, t_list	*list_b);
 
 #endif

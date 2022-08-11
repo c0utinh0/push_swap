@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 16:52:28 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/09 16:57:30 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/11 17:28:53 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,34 @@ void	sb(t_list	*list)
 	node_b->next = node_a;
 	write(1, "sb\n", 3);
 }
+
+void	pb(t_list	*list_a, t_list	*list_b)
+{
+	t_node	*node;
+
+	if (list_b->len == 0)
+		return ;
+	node = list_a->start;
+	list_a->start = list_a->start->next;
+	node->next = list_b->start;
+	list_b->start = node;
+	write(1, "pb\n", 3);
+}
+
+void	rb(t_list	*list)
+{
+	t_node	*node;
+	t_node	*aux;
+
+	if (list->len == 0)
+		return ;
+	node = list->start;
+	aux = list->start;
+	while (aux->next != NULL)
+		aux = aux->next;
+	aux->next = node;
+	list->start = list->start->next;
+	node->next = NULL;
+	write(1, "rb\n", 3);
+}
+

@@ -59,3 +59,25 @@ void	rr(t_list	*list_a, t_list	*list_b)
 	write(1, "rr\n", 3);
 }
 
+void    rrr(t_list	*list_a, t_list	*list_b)
+{
+	t_node	*aux;
+	t_node	*node_a;
+	t_node	*node_b;
+
+	node_a = list_a->start;
+	aux = list_a->start;
+	while (aux->next->next != NULL)
+		aux = aux->next;
+	aux->next->next = list_a->start;
+	list_a->start = aux->next;
+	aux->next = NULL;
+	node_b = list_b->start;
+	aux = list_b->start;
+	while (aux->next->next != NULL)
+		aux = aux->next;
+	aux->next->next = list_b->start;
+	list_b->start = aux->next;
+	aux->next = NULL;
+	write(1, "rrr\n", 4);
+}

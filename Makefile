@@ -34,7 +34,8 @@ all: $(NAME)
 
 $(NAME): $(SRC)
 	$(LIBFT)
-	$(CC) $(SRCS) $(NAME) -o push_swap
+#	$(CC) $(SRCS) $(NAME) -o push_swap
+	$(CC) $(SRCS) $(NAME)	#REMOVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 clean: 
 	rm -f $(OBJS)

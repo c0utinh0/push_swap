@@ -59,5 +59,43 @@ void	ra(t_list	*list)
 
 void	rra(t_list	*list)
 {
-	
+	t_node	*aux;
+	t_node	*node;
+
+	node = list->start;
+	aux = list->start;
+	while (aux->next->next != NULL)
+		aux = aux->next;
+	aux->next->next = list->start;
+	list->start = aux->next;
+	aux->next = NULL;
+	write(1, "rra\n", 4);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

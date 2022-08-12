@@ -67,11 +67,24 @@ int	main(int argc, char	*argv[])
 
 	ft_insert_args(&stack_a, argv, argc);
 	ft_insert_args(&stack_b, argv, argc);
+	rrr(&stack_a, &stack_b);
+//	ft_print_list(&stack_a);
+//	rr(&stack_b);
+	ft_print_list(&stack_a);
+	ft_print_list(&stack_b);
+	
+/*
+	//TESTES ROTATE
+	ft_insert_args(&stack_a, argv, argc);
+	ft_insert_args(&stack_b, argv, argc);
 	rr(&stack_a, &stack_b);
 	ft_print_list(&stack_a);
 	ft_print_list(&stack_b);
+*/
+
 
 /*
+	//TESTES PUSH
 	ft_insert_args(&stack_a, argv, argc);
 	ft_insert_args(&stack_b, argv, argc);
 	ft_print_list(&stack_a);

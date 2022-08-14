@@ -60,19 +60,45 @@ int	main(int argc, char	*argv[])
 	t_list stack_a;
 	t_list stack_b;
 
+	// BUBBLE SORT
+	bool mudanca = true;
+	int i = 0;
+
+
 	stack_a.len = 0;
 	stack_a.start = NULL;
-	stack_b.len = 0;
-	stack_b.start = NULL;
+//	stack_b.len = 0;
+//	stack_b.start = NULL;
 
 	ft_insert_args(&stack_a, argv, argc);
+	
+	while (mudanca)
+	{
+		mudanca = false;
+		while ( i < (stack_a.len - 1))
+		{
+
+			i++;
+		}
+
+
+
+
+
+
+
+	ft_print_list(&stack_a);
+
+/*
+	ft_insert_args(&stack_a, argv, argc);
 	ft_insert_args(&stack_b, argv, argc);
-	rrr(&stack_a, &stack_b);
+//	rrr(&stack_a, &stack_b);
 //	ft_print_list(&stack_a);
 //	rr(&stack_b);
 	ft_print_list(&stack_a);
 	ft_print_list(&stack_b);
-	
+*/
+
 /*
 	//TESTES ROTATE
 	ft_insert_args(&stack_a, argv, argc);

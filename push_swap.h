@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 10:17:48 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/11 17:39:55 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/17 17:46:19 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,13 @@ typedef struct	s_list
 	t_node	*start;
 }	t_list;
 
-void	sa(t_list	*list);
+//void	sa(t_list	*list);
+void	sa(t_node	**list, int argc);
+//t_node *sa(t_node* ptr1, t_node* ptr2);
 void	sb(t_list	*list);
 void	ss(t_list	*list_a, t_list	*list_b);
-void	ft_print_list(t_list	*list);
+//void	ft_print_list(t_list	*list);
+void	ft_print_list(t_node	*list);
 void	pa(t_list	*list_a, t_list	*list_b);
 void	pb(t_list	*list_a, t_list	*list_b);
 void	ra(t_list	*list);

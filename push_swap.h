@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 10:17:48 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/18 11:04:13 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/18 11:16:18 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,6 @@ typedef struct	s_node
 	int	data;
 	struct	s_node	*next;
 }	t_node;
-
-typedef struct	s_list
-{
-	int	len;
-	t_node	*start;
-}	t_list;
 
 void	ft_print_list(t_node	*list);
 void	sa(t_node	**list, int argc);

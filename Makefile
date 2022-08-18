@@ -6,7 +6,7 @@
 #    By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/08 16:32:52 by dcoutinh          #+#    #+#              #
-#    Updated: 2022/08/16 08:40:20 by dcoutinh         ###   ########.fr        #
+#    Updated: 2022/08/18 11:14:17 by dcoutinh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ all: $(NAME)
 
 $(NAME): $(SRC)
 	$(LIBFT)
-	$(CC) $(SRCS) $(NAME) -g -o push_swap
+	$(CC) $(SRCS) $(NAME) -o push_swap
 
 
 clean: 

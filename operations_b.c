@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 16:52:28 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/18 10:23:04 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/18 10:38:37 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	sb(t_node	**node, int argc)
 	*node = node_b;
 	node_a->next = node_b->next;
 	node_b->next = node_a;
-	write(1, "sa\n", 3);
+	write(1, "sb\n", 3);
 	}
 
 void	pb(t_node	**node_a, t_node	**node_b, int argc)
@@ -37,22 +37,22 @@ void	pb(t_node	**node_a, t_node	**node_b, int argc)
 	*node_a = (*node_a)->next;
 	node->next = *node_b;
 	*node_b = node;
-	write(1, "pa\n", 3);
+	write(1, "pb\n", 3);
 }
 
-void	rb(t_list	*list)
+void	rb(t_node	**list, int argc)
 {
 	t_node	*node;
 	t_node	*aux;
 
-	if (list->len == 0)
+	if (argc == 0)
 		return ;
-	node = list->start;
-	aux = list->start;
+	node = *list;
+	aux = *list;
 	while (aux->next != NULL)
 		aux = aux->next;
 	aux->next = node;
-	list->start = list->start->next;
+	*list = (*list)->next;
 	node->next = NULL;
 	write(1, "rb\n", 3);
 }

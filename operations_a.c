@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 17:01:53 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/18 10:19:07 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/18 10:35:30 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,19 +41,19 @@ void	sa(t_node	**node, int argc)
 	write(1, "pa\n", 3);
 }
 
-void	ra(t_list	*list)
+void	ra(t_node	**list, int argc)
 {
 	t_node	*node;
 	t_node	*aux;
 
-	if (list->len == 0)
+	if (argc == 0)
 		return ;
-	node = list->start;
-	aux = list->start;
+	node = *list;
+	aux = *list;
 	while (aux->next != NULL)
 		aux = aux->next;
 	aux->next = node;
-	list->start = list->start->next;
+	*list = (*list)->next;
 	node->next = NULL;
 	write(1, "ra\n", 3);
 }

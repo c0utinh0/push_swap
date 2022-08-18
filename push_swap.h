@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 10:17:48 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/18 10:36:59 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/18 11:04:13 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ void	pa(t_node	**list_a, t_node	**list_b, int argc);
 void	pb(t_node	**list_a, t_node	**list_b, int argc);
 void	ra(t_node	**list, int argc);
 void	rb(t_node	**list, int argc);
-void	rr(t_list	*list_a, t_list	*list_b);
-void	rra(t_list	*list);
-void	rrb(t_list	*list);
-void	rrr(t_list	*list_a, t_list	*list_b);
+void	rr(t_node	**list_a, t_node	**list_b, int argc);
+void	rra(t_node	**list, int argc);
+void	rrb(t_node	**list, int argc);
+void	rrr(t_node	**list_a, t_node	**list_b, int argc);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 17:01:53 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/18 11:01:25 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/18 17:25:01 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	ra(t_node	**list, int argc)
 	write(1, "ra\n", 3);
 }
 
-void	rra(t_node	**list, int argc)
+void	rra(t_node	**list)
 {
 	t_node	*aux;
 	t_node	*node;

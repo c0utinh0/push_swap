@@ -6,7 +6,7 @@
 #    By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/08 16:32:52 by dcoutinh          #+#    #+#              #
-#    Updated: 2022/08/18 11:14:17 by dcoutinh         ###   ########.fr        #
+#    Updated: 2022/08/18 17:22:39 by dcoutinh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRCS =  push_swap.c	\
 		operations_a.c	\
 		operations_b.c	\
 		operations_ab.c	\
+		sort.c	\
 
 
 OBJS = $(SRCS:.c=.o)
@@ -34,8 +35,7 @@ all: $(NAME)
 
 $(NAME): $(SRC)
 	$(LIBFT)
-	$(CC) $(SRCS) $(NAME) -o push_swap
-
+	$(CC) $(CFLAGS) $(SRCS) $(NAME) -g -o push_swap
 
 clean: 
 	rm -f $(OBJS)

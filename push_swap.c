@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 14:22:21 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/18 11:51:31 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/18 17:24:20 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ void	ft_add_node(t_node	**p, int x)
 	*p = node;
 }
 
-
 void	ft_insert_args(t_node	**p, char	*argv[], int argc)
 {
 	while (argc != 1)
@@ -57,9 +56,9 @@ int	main(int argc, char	*argv[])
 	stack_a = ft_create_list();
 	stack_b = ft_create_list();
 	ft_insert_args(&stack_a, argv, argc);
-	ft_insert_args(&stack_b, argv, argc);
-
-	ft_print_list(stack_a);
-	ft_print_list(stack_b);
+	ft_sort(&stack_a, &stack_b, --argc);
+//	ft_insert_args(&stack_b, argv, argc);
+//	ft_print_list(stack_a);
+//	ft_print_list(stack_b);
 	return (0);
 }

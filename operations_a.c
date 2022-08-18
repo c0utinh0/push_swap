@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 17:01:53 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/17 17:45:56 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/18 10:19:07 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,25 +28,16 @@ void	sa(t_node	**node, int argc)
 	write(1, "sa\n", 3);
 	}
 
-/*
-t_node *sa(t_node* ptr1, t_node* ptr2)
-{
-    t_node* tmp = ptr2->next;
-    ptr2->next = ptr1;
-    ptr1->next = tmp;
-    return ptr2;
-}
-*/
-	void	pa(t_list	*list_a, t_list	*list_b)
+	void	pa(t_node	**node_a, t_node	**node_b, int argc)
 	{
 		t_node	*node;
 
-	if (list_a->len == 0)
+	if (argc == 0)
 		return ;
-	node = list_b->start;
-	list_b->start = list_b->start->next;
-	node->next = list_a->start;
-	list_a->start = node;
+	node = *node_b;
+	*node_b = (*node_b)->next;
+	node->next = *node_a;
+	*node_a = node;
 	write(1, "pa\n", 3);
 }
 

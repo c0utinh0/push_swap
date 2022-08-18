@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 14:22:21 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/17 17:48:08 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/18 08:29:56 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,9 @@ void	ft_add_node(t_node	**p, int x)
 	node = (t_node*) malloc(sizeof(t_node));
 	if (node == NULL)
 		exit(EXIT_FAILURE);
-	node->data = x; //Adiciona o valor de x no campo data do nodo
-	node->next = *p; //Aponta o node criado para o primeiro nodo
-	*p = node; //Faz o inicio da lista apontar para o nodo criado
-
+	node->data = x;
+	node->next = *p;
+	*p = node;
 }
 
 
@@ -50,87 +49,40 @@ void	ft_insert_args(t_node	**p, char	*argv[], int argc)
 		ft_add_node(p, ft_atoi(argv[--argc]));
 }
 
-/*
 void	ft_bubble(t_node	**list, int argc)
 {
-	t_node	*temp;
-	t_node	**node;
+	t_node	**temp;
 
-	temp = *list;
-	node = &temp;
-	// BUBBLE SORT
+		temp = list;
 	unsigned int mudanca = 1;
 	int i;
 
     while (mudanca)
 	{
         mudanca = 0;
-        while(temp->next != NULL)
+        while((*temp)->next != NULL)
 		{
-            if (temp->data > temp->next->data)
+            if ((*temp)->data > (*temp)->next->data)
 			{
-				sa(&temp, argc);
-//				node = temp;
+				sa(temp, argc);
 				mudanca = 1;
 			}
-				temp = temp->next;
+				temp = &(*temp)->next;
         }
-		temp = *list;
-//		(*list) = node;
+		temp = list;
     }
-}
-*/
-/*
-void ft_bubble(t_node** head, int count)
-{
-    t_node** h;
-    int i, j, swapped;
-
-    for (i = 0; i <= count; i++)
-    {
-
-        h = head;
-        swapped = 0;
-
-        for (j = 0; j < count - i - 1; j++)
-        {
-
-            t_node* p1 = *h;
-            t_node* p2 = p1->next;
-
-            if (p1->data > p2->data)
-            {
-
-                // update the link after swapping 
-                *h = sa(p1, p2);
-                swapped = 1;
-            }
-
-            h = &(*h)->next;
-        }
-
-        // break if the loop ended without any swap 
-        if (swapped == 0)
-            break;
-    }
-}
-*/
-
-void	ft_sort(t_node	**list, int	len)
-{
-
 }
 
 int	main(int argc, char	*argv[])
 {
-	t_node *stack_a; 
+	t_node *stack_a;
 
 	stack_a = ft_create_list();
 	ft_insert_args(&stack_a, argv, argc);
-	ft_print_list(stack_a);
+//	ft_print_list(stack_a);
 	ft_bubble(&stack_a, argc);
 //	sa(&stack_a, argc);
-	ft_print_list(stack_a);
+//	ft_print_list(stack_a);
 
 	return (0);
 }

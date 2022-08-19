@@ -6,7 +6,7 @@
 #    By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/08 16:32:52 by dcoutinh          #+#    #+#              #
-#    Updated: 2022/08/18 17:22:39 by dcoutinh         ###   ########.fr        #
+#    Updated: 2022/08/19 08:16:52 by dcoutinh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRCS =  push_swap.c	\
 		operations_b.c	\
 		operations_ab.c	\
 		sort.c	\
+		three_values.c	\
 
 
 OBJS = $(SRCS:.c=.o)

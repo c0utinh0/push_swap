@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 15:11:28 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/18 18:24:09 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/19 08:29:24 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_check_sort(t_node **list)
 	}
 	return (0);
 }
-void	ft_sort(t_node **list_a, t_node **list_b, int len)
+void	sort(t_node **list_a, t_node **list_b, int len)
 {
 	int	i;
 //	t_node	**temp;

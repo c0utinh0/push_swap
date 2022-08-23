@@ -6,13 +6,13 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 14:22:21 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/19 08:48:14 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/23 08:48:24 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_node	*ft_create_list()
+static t_node	*ft_create_list()
 {
 	return	NULL;
 }
@@ -30,7 +30,7 @@ void	ft_print_list(t_node	*p)
 	ft_printf("NULL\n");
 }
 
-void	ft_add_node(t_node	**p, int x)
+static void	ft_add_node(t_node	**p, int x)
 {
 	t_node	*node;
 
@@ -42,7 +42,7 @@ void	ft_add_node(t_node	**p, int x)
 	*p = node;
 }
 
-void	ft_insert_args(t_node	**p, char	*argv[], int argc)
+static void	ft_insert_args(t_node	**p, char	*argv[], int argc)
 {
 	while (argc != 1)
 		ft_add_node(p, ft_atoi(argv[--argc]));

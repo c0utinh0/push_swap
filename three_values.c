@@ -6,11 +6,26 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 08:14:36 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/19 08:48:41 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/23 08:46:06 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static void	ft_option(char op, t_node **list_a, t_node **list_b, int argc)
+{
+	if (op == 'a')
+	{
+		pb(list_a, list_b, argc);
+		sa(list_a, argc);
+		pa(list_a, list_b, argc);
+	}
+	else if (op == 'b')
+	{
+		ra(list_a, argc);
+		sa(list_a, argc);
+	}
+}
 
 void	three_values(t_node **list_a, t_node **list_b, int argc)
 {
@@ -22,20 +37,20 @@ void	three_values(t_node **list_a, t_node **list_b, int argc)
 	data_a = (*list_a)->data;
 	data_b = (*list_a)->next->data;
 	data_c = (*list_a)->next->next->data;
-	if ((data_a < data_b) && (data_a < data_c))
+	if ((data_a < data_b) && (data_a < data_c) && (data_c < data_b))
+		ft_option('a', list_a, list_b, argc);
+	if ((data_b < data_a) && (data_b < data_c))
 	{
-		if (data_b < data_c)
-			exit(0);
-		else
-		{
-			pb(list_a, list_b, argc);
+		if (data_a < data_c)
 			sa(list_a, argc);
-			pa(list_a, list_b, argc);
-		}
+		else
+			ra(list_a, argc);
 	}
-	ft_print_list(*list_a);
-//	ft_printf("%d\n", data_a);
-//	ft_printf("%d\n", data_b);
-//	ft_printf("%d\n", data_c);
+	if ((data_c < data_a) && (data_c < data_b))
+	{
+		if (data_a < data_b)
+			rra(list_a);
+		else
+			ft_option('b', list_a, list_b, argc);
+	}
 }
-

@@ -6,21 +6,19 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 16:52:36 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/18 17:26:19 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/23 15:59:57 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ss(t_node	**node_a, t_node	**node_b, int argc)
+void	ss(t_node	**node_a, t_node	**node_b)
 {
 	t_node	*node_aa;
 	t_node	*node_ab;
 	t_node	*node_ba;
 	t_node	*node_bb;
 
-	if (argc < 2 )
-		return ;
 	node_aa = *node_a;
 	node_ab = (*node_a)->next;
 	*node_a = node_ab;
@@ -34,14 +32,12 @@ void	ss(t_node	**node_a, t_node	**node_b, int argc)
 	write(1, "ss\n", 3);
 }
 
-void	rr(t_node	**list_a, t_node	**list_b, int argc)
+void	rr(t_node	**list_a, t_node	**list_b)
 {
 	t_node	*node_a;
 	t_node	*node_b;
 	t_node	*aux;
 
-	if (argc == 0)
-		return ;
 	node_a = *list_a;
 	aux = *list_a;
 	while (aux->next != NULL)

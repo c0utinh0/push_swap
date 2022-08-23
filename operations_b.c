@@ -6,19 +6,17 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 16:52:28 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/18 17:25:59 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/23 17:18:26 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sb(t_node	**node, int argc)
+void	sb(t_node	**node)
 {
 	t_node	*node_a;
 	t_node	*node_b;
 
-	if (argc < 2)
-		return ;
 	node_a = *node;
 	node_b = (*node)->next;
 	*node = node_b;
@@ -27,12 +25,10 @@ void	sb(t_node	**node, int argc)
 	write(1, "sb\n", 3);
 	}
 
-void	pb(t_node	**node_a, t_node	**node_b, int argc)
+void	pb(t_node	**node_a, t_node	**node_b)
 	{
 		t_node	*node;
 
-	if (argc == 0)
-		return ;
 	node = *node_a;
 	*node_a = (*node_a)->next;
 	node->next = *node_b;
@@ -40,13 +36,11 @@ void	pb(t_node	**node_a, t_node	**node_b, int argc)
 	write(1, "pb\n", 3);
 }
 
-void	rb(t_node	**list, int argc)
+void	rb(t_node	**list)
 {
 	t_node	*node;
 	t_node	*aux;
 
-	if (argc == 0)
-		return ;
 	node = *list;
 	aux = *list;
 	while (aux->next != NULL)
@@ -71,4 +65,3 @@ void	rrb(t_node	**list)
 	aux->next = NULL;
 	write(1, "rrb\n", 4);
 }
-

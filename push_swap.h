@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 10:17:48 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/23 15:05:06 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/23 15:47:58 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,25 @@ typedef struct	s_node
 	struct	s_node	*next;
 }	t_node;
 
-void	ft_print_list(t_node	*list);
-void	sa(t_node	**list, int argc);
-void	sb(t_node	**list, int argc);
-void	ss(t_node	**list_a, t_node	**list_b, int argc);
-void	pa(t_node	**list_a, t_node	**list_b, int argc);
-void	pb(t_node	**list_a, t_node	**list_b, int argc);
-void	ra(t_node	**list, int argc);
-void	rb(t_node	**list, int argc);
-void	rr(t_node	**list_a, t_node	**list_b, int argc);
+void	sa(t_node	**list);
+void	sb(t_node	**list);
+void	ss(t_node	**list_a, t_node	**list_b);
+void	pa(t_node	**list_a, t_node	**list_b);
+void	pb(t_node	**list_a, t_node	**list_b);
+void	ra(t_node	**list);
+void	rb(t_node	**list);
+void	rr(t_node	**list_a, t_node	**list_b);
 void	rra(t_node	**list);
 void	rrb(t_node	**list);
 void	rrr(t_node	**list_a, t_node	**list_b);
-void	bubble_sort(t_node	**list_a, t_node	**list_b, int argc);
-void	merge_sort(t_node	**list_a, t_node	**list_b, int argc);
+
+int	ft_list_len(t_node	**list_a);
+void	ft_print_list(t_node	*list);
 int	ft_check_sort(t_node **list);
-void	three_values(t_node **list_a, t_node **list_b, int argc);
+
+void	bubble_sort(t_node	**list_a, t_node	**list_b);
+void	merge_sort(t_node	**list_a, t_node	**list_b);
+void	three_values(t_node **list_a, t_node **list_b);
 
 
 #endif

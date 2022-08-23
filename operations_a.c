@@ -6,20 +6,18 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 17:01:53 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/18 17:25:01 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/23 17:17:14 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 
-void	sa(t_node	**node, int argc)
+void	sa(t_node	**node)
 {
 	t_node	*node_a;
 	t_node	*node_b;
 
-	if (argc < 2)
-		return ;
 	node_a = *node;
 	node_b = (*node)->next;
 	*node = node_b;
@@ -28,12 +26,10 @@ void	sa(t_node	**node, int argc)
 	write(1, "sa\n", 3);
 	}
 
-	void	pa(t_node	**node_a, t_node	**node_b, int argc)
+	void	pa(t_node	**node_a, t_node	**node_b)
 	{
 		t_node	*node;
 
-	if (argc == 0)
-		return ;
 	node = *node_b;
 	*node_b = (*node_b)->next;
 	node->next = *node_a;
@@ -41,13 +37,11 @@ void	sa(t_node	**node, int argc)
 	write(1, "pa\n", 3);
 }
 
-void	ra(t_node	**list, int argc)
+void	ra(t_node	**list)
 {
 	t_node	*node;
 	t_node	*aux;
 
-	if (argc == 0)
-		return ;
 	node = *list;
 	aux = *list;
 	while (aux->next != NULL)

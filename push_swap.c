@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 14:22:21 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/23 15:04:14 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/23 17:31:22 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,11 @@ int	main(int argc, char	*argv[])
 	stack_a = ft_create_list();
 	stack_b = ft_create_list();
 	ft_insert_args(&stack_a, argv, argc);
-	merge_sort(&stack_a, &stack_b, --argc);
-//	bubble_sort(&stack_a, &stack_b, --argc);
 	if ((argc - 1) == 3)
-		three_values(&stack_a, &stack_b, argc);
+		three_values(&stack_a, &stack_b);
+//	merge_sort(&stack_a, &stack_b);
+	bubble_sort(&stack_a, &stack_b);
+
 //	ft_insert_args(&stack_b, argv, argc);
 //	ft_print_list(stack_a);
 //	ft_print_list(stack_b);

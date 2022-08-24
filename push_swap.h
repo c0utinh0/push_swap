@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 10:17:48 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/23 15:47:58 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/24 08:23:15 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,12 @@ void	rra(t_node	**list);
 void	rrb(t_node	**list);
 void	rrr(t_node	**list_a, t_node	**list_b);
 
-int	ft_list_len(t_node	**list_a);
 void	ft_print_list(t_node	*list);
+int	ft_list_len(t_node	**list_a);
 int	ft_check_sort(t_node **list);
 
-void	bubble_sort(t_node	**list_a, t_node	**list_b);
+void	bubble_sort(t_node	**list);
+void	double_sort(t_node	**list_a, t_node	**list_b);
 void	merge_sort(t_node	**list_a, t_node	**list_b);
 void	three_values(t_node **list_a, t_node **list_b);
 

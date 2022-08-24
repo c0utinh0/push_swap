@@ -6,7 +6,7 @@
 #    By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/08 16:32:52 by dcoutinh          #+#    #+#              #
-#    Updated: 2022/08/23 15:04:36 by dcoutinh         ###   ########.fr        #
+#    Updated: 2022/08/24 16:52:52 by dcoutinh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRCS =  push_swap.c	\
 		bubble_sort.c	\
 		merge_sort.c	\
 		three_values.c	\
+		five_values.c	\
 		sort_utils.c	\
 
 

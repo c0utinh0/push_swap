@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 14:36:44 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/24 17:03:32 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/24 17:51:10 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ void	ft_concat(t_node** stack_a, t_node** stack_b)
         if ((*stack_a)->data < (*stack_b)->data)
             ra(stack_a);
         else
+            pa(stack_a, stack_b);
+        if ((*stack_a)->data == small)
             pa(stack_a, stack_b);
     }
     while ((*stack_a)->data != small)

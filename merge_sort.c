@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 14:59:47 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/24 17:07:47 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/25 17:17:59 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,9 @@ void	merge_sort(t_node **list_a, t_node **list_b)
 //	ft_printf("--PUSHED--\n");
 //	ft_print_list(*list_a);
 //	ft_print_list(*list_b);
-	double_sort(list_a, list_b);
+//	double_sort(list_a, list_b);
+	bubble_sort(list_a);
+	bubble_sort(list_b);
 	ft_concat(list_a, list_b);
 //	ft_print_list(*list_a);
 //	ft_print_list(*list_b);
@@ -45,6 +47,6 @@ void	merge_sort(t_node **list_a, t_node **list_b)
 //	while(temp--)
 //		pa(list_a, list_b);
 //	bubble_sort(list_a);
-	ft_print_list(*list_a);
+//	ft_print_list(*list_a);
 //	ft_print_list(*list_b);
 }

@@ -6,11 +6,11 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 15:11:28 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/24 15:56:03 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/25 18:43:28 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	bubble_sort(t_node **list)
 {

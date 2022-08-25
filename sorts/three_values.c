@@ -6,11 +6,11 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 08:14:36 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/23 15:44:19 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/25 18:40:45 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static void	ft_option(char op, t_node **list_a, t_node **list_b)
 {

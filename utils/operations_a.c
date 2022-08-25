@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations_b.c                                     :+:      :+:    :+:   */
+/*   operations_a.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/09 16:52:28 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/23 17:18:26 by dcoutinh         ###   ########.fr       */
+/*   Created: 2022/08/08 17:01:53 by dcoutinh          #+#    #+#             */
+/*   Updated: 2022/08/25 18:47:53 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void	sb(t_node	**node)
+
+void	sa(t_node	**node)
 {
 	t_node	*node_a;
 	t_node	*node_b;
@@ -22,21 +23,21 @@ void	sb(t_node	**node)
 	*node = node_b;
 	node_a->next = node_b->next;
 	node_b->next = node_a;
-	write(1, "sb\n", 3);
+	write(1, "sa\n", 3);
 	}
 
-void	pb(t_node	**node_a, t_node	**node_b)
+	void	pa(t_node	**node_a, t_node	**node_b)
 	{
 		t_node	*node;
 
-	node = *node_a;
-	*node_a = (*node_a)->next;
-	node->next = *node_b;
-	*node_b = node;
-	write(1, "pb\n", 3);
+	node = *node_b;
+	*node_b = (*node_b)->next;
+	node->next = *node_a;
+	*node_a = node;
+	write(1, "pa\n", 3);
 }
 
-void	rb(t_node	**list)
+void	ra(t_node	**list)
 {
 	t_node	*node;
 	t_node	*aux;
@@ -48,10 +49,10 @@ void	rb(t_node	**list)
 	aux->next = node;
 	*list = (*list)->next;
 	node->next = NULL;
-	write(1, "rb\n", 3);
+	write(1, "ra\n", 3);
 }
 
-void	rrb(t_node	**list)
+void	rra(t_node	**list)
 {
 	t_node	*aux;
 	t_node	*node;
@@ -63,5 +64,33 @@ void	rrb(t_node	**list)
 	aux->next->next = *list;
 	*list = aux->next;
 	aux->next = NULL;
-	write(1, "rrb\n", 4);
+	write(1, "rra\n", 4);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -6,11 +6,11 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 14:59:47 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/25 17:17:59 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/25 18:44:28 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	merge_sort(t_node **list_a, t_node **list_b)
 {

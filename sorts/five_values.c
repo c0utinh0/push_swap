@@ -6,11 +6,11 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 16:50:14 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/25 14:57:14 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/25 18:45:03 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	five_values(t_node **list_a, t_node **list_b)
 {

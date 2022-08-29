@@ -6,11 +6,48 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 14:36:44 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/25 18:37:35 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/29 16:50:51 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+void	ft_index_list(t_node **list)
+{
+	t_node	**aux;
+	t_node	*t;
+	t_node	**tmp;
+	unsigned int index;
+
+	index = 0;
+	t = ft_create_list();
+	tmp = &t;
+	aux = list;
+	while (*aux != NULL)
+	{
+		ft_add_node(tmp, (*aux)->data);
+		aux = &(*aux)->next;
+	}
+	aux = list;
+	fake_bubble_sort(tmp);
+	while (*tmp != NULL)
+	{
+		while (*aux != NULL)
+		{
+			if ((*aux)->data == (*tmp)->data)
+				(*aux)->index = index++;
+			aux = &(*aux)->next;
+		}
+		aux = (list);
+		tmp = &(*tmp)->next;
+	}
+	ft_print_list(*list);
+	ft_print_index(*list);
+	ft_print_list(*aux);
+	ft_print_list(*tmp);
+	ft_print_list(t);
+
+}
 
 int	ft_check_sort(t_node **list)
 {

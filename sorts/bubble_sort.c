@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 15:11:28 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/25 18:43:28 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/29 16:48:49 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,27 @@ void	bubble_sort(t_node **list)
 		if (i == (len - 1))
 		{
 			ra(list);
+			i = 0;
+		}
+	}
+}
+
+void	fake_bubble_sort(t_node **list)
+{
+	int	i;
+	int len;
+
+	i = 0;
+	len = ft_list_len(list);
+	while (ft_check_sort(list))
+	{
+		if ((*list)->data > (*list)->next->data)
+			fake_sa(list);
+		fake_ra(list);
+		i++;
+		if (i == (len - 1))
+		{
+			fake_ra(list);
 			i = 0;
 		}
 	}

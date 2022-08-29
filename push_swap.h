@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 10:17:48 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/25 10:47:12 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/29 16:47:34 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,31 +19,40 @@
 
 typedef struct	s_node
 {
+	unsigned int	index;
 	int	data;
 	struct	s_node	*next;
 }	t_node;
 
 void	sa(t_node	**list);
+void	fake_sa(t_node	**list);
 void	sb(t_node	**list);
 void	ss(t_node	**list_a, t_node	**list_b);
 void	pa(t_node	**list_a, t_node	**list_b);
 void	pb(t_node	**list_a, t_node	**list_b);
 void	ra(t_node	**list);
+void	fake_ra(t_node	**list);
 void	rb(t_node	**list);
 void	rr(t_node	**list_a, t_node	**list_b);
 void	rra(t_node	**list);
 void	rrb(t_node	**list);
 void	rrr(t_node	**list_a, t_node	**list_b);
 
+void	ft_index_list(t_node	**list);
+void	ft_print_index(t_node	*list);
 void	ft_print_list(t_node	*list);
 int	ft_list_len(t_node	**list_a);
 int	ft_check_sort(t_node **list);
 void	ft_concat(t_node** list_a, t_node** list_b);
 int	ft_max_value(t_node **list);
+void	ft_add_node(t_node	**p, int x);
+t_node	*ft_create_list();
 
 void	bubble_sort(t_node	**list);
+void	fake_bubble_sort(t_node	**list);
 void	double_sort(t_node	**list_a, t_node	**list_b);
 void	merge_sort(t_node	**list_a, t_node	**list_b);
+void	radix_sort(t_node	**list_a, t_node	**list_b);
 void	three_values(t_node **list_a, t_node **list_b);
 void	five_values(t_node **list_a, t_node **list_b);
 

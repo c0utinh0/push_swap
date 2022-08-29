@@ -6,7 +6,7 @@
 #    By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/08 16:32:52 by dcoutinh          #+#    #+#              #
-#    Updated: 2022/08/25 18:47:19 by dcoutinh         ###   ########.fr        #
+#    Updated: 2022/08/29 16:59:13 by dcoutinh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,10 +18,12 @@ CFLAGS = -Wall -Wextra -Werror
 
 SRCS =  push_swap.c	\
 		utils/operations_a.c	\
+		utils/fake_operations.c	\
 		utils/operations_b.c	\
 		utils/operations_ab.c	\
 		sorts/bubble_sort.c	\
 		sorts/merge_sort.c	\
+		sorts/radix_sort.c	\
 		sorts/three_values.c	\
 		sorts/five_values.c	\
 		utils/sort_utils.c	\

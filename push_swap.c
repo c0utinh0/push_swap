@@ -6,15 +6,28 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 14:22:21 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/25 17:24:32 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/29 16:31:14 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static t_node	*ft_create_list()
+t_node	*ft_create_list()
 {
 	return	NULL;
+}
+
+void	ft_print_index(t_node	*p)
+{
+	t_node	*node;
+
+	node = p;
+	while (node != NULL)
+	{
+		ft_printf("%d -> ", node->index);
+		node = node->next;
+	}
+	ft_printf("NULL\n");
 }
 
 void	ft_print_list(t_node	*p)
@@ -30,7 +43,7 @@ void	ft_print_list(t_node	*p)
 	ft_printf("NULL\n");
 }
 
-static void	ft_add_node(t_node	**p, int x)
+void	ft_add_node(t_node	**p, int x)
 {
 	t_node	*node;
 
@@ -56,19 +69,25 @@ int	main(int argc, char	*argv[])
 	stack_a = ft_create_list();
 	stack_b = ft_create_list();
 	ft_insert_args(&stack_a, argv, argc);
-//	if ((argc - 1) == 3)
-//		three_values(&stack_a, &stack_b);
-	merge_sort(&stack_a, &stack_b);
-//	five_values(&stack_a, &stack_b);
-//	bubble_sort(&stack_a);
-//	ft_insert_args(&stack_b, argv, argc);
+	if ((argc - 1) > 1)
+	{
+		if ((argc - 1) == 3)
+			three_values(&stack_a, &stack_b);
+		else if ((argc - 1) == 5)
+			five_values(&stack_a, &stack_b);
+		radix_sort(&stack_a, &stack_b);
+//		merge_sort(&stack_a, &stack_b);
+//		five_values(&stack_a, &stack_b);
+//		bubble_sort(&stack_a);
+//		ft_insert_args(&stack_b, argv, argc);
 
-//	ft_print_list(stack_a);
-//	ft_print_list(stack_b);
-//	pb(&stack_a, &stack_b);
-//	pb(&stack_a, &stack_b);
-//	ft_print_list(stack_a);
-//	ft_print_list(stack_b);
+//		ft_print_list(stack_a);
+//		ft_print_list(stack_b);
+//		pb(&stack_a, &stack_b);
+//		pb(&stack_a, &stack_b);
+//		ft_print_list(stack_a);
+//		ft_print_list(stack_b);
+	}
 
 	return (0);
 }

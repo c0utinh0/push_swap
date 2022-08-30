@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 14:36:44 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/29 17:26:18 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/30 14:53:07 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ int	ft_list_len(t_node **list)
 
 	aux = list;
 	len = 1;
+	if((*aux) == NULL)
+		return (0);
 	while ((*aux)->next != NULL)
 	{
 		aux = &(*aux)->next;

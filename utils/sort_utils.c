@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 14:36:44 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/30 14:53:07 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/31 14:46:27 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_index_list(t_node **list)
 {
-	t_node	**aux;
-	t_node	*t;
-	t_node	**tmp;
-	unsigned int index;
+	t_node			**aux;
+	t_node			*t;
+	t_node			**tmp;
+	unsigned int	index;
 
 	index = 0;
 	t = ft_create_list();
@@ -61,11 +61,11 @@ int	ft_check_sort(t_node **list)
 int	ft_list_len(t_node **list)
 {
 	t_node	**aux;
-	int len;
+	int		len;
 
 	aux = list;
 	len = 1;
-	if((*aux) == NULL)
+	if ((*aux) == NULL)
 		return (0);
 	while ((*aux)->next != NULL)
 	{
@@ -78,7 +78,7 @@ int	ft_list_len(t_node **list)
 int	ft_max_value(t_node **list)
 {
 	t_node	**aux;
-	int max;
+	int		max;
 
 	aux = list;
 	max = 0;
@@ -91,21 +91,21 @@ int	ft_max_value(t_node **list)
 	return (max);
 }
 
-void	ft_concat(t_node** stack_a, t_node** stack_b)
+void	ft_concat(t_node **stack_a, t_node **stack_b)
 {
     int	small;
-	int a_max;
-	int len;
+	int	a_max;
+	int	len;
 
 	len = ft_list_len(stack_a);
 	a_max = ft_max_value(stack_a);
-    if ((*stack_a)->data > (*stack_b)->data)
-        small = (*stack_b)->data;
-    else
-        small = (*stack_a)->data;
-    while ((*stack_b) != NULL)
-    {
-        if ((*stack_a)->data < (*stack_b)->data)
+	if ((*stack_a)->data > (*stack_b)->data)
+		small = (*stack_b)->data;
+	else
+		small = (*stack_a)->data;
+	while ((*stack_b) != NULL)
+	{
+		if ((*stack_a)->data < (*stack_b)->data)
 		{
 			if((*stack_b)->data > a_max)
 			{

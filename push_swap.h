@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 10:17:48 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/30 09:46:25 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/31 13:49:53 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 # include <stdlib.h>
 # include "libft/libft.h"
 
-typedef struct	s_node
+typedef struct s_node
 {
 	unsigned int	index;
-	int	data;
-	struct	s_node	*next;
+	int				data;
+	struct s_node	*next;
 }	t_node;
 
 void	sa(t_node	**list);
@@ -41,20 +41,18 @@ void	rrr(t_node	**list_a, t_node	**list_b);
 void	ft_index_list(t_node	**list);
 void	ft_print_index(t_node	*list);
 void	ft_print_list(t_node	*list);
-int	ft_list_len(t_node	**list_a);
-int	ft_check_sort(t_node **list);
-void	ft_concat(t_node** list_a, t_node** list_b);
-int	ft_max_value(t_node **list);
+int		ft_list_len(t_node	**list_a);
+int		ft_check_sort(t_node **list);
+void	ft_concat(t_node	**list_a, t_node	**list_b);
+int		ft_max_value(t_node **list);
 void	ft_add_node(t_node	**p, int x);
-t_node	*ft_create_list();
-void ft_remove_list(t_node *list);
+t_node	*ft_create_list(void);
+void	ft_remove_list(t_node *list);
 void	ft_add_node(t_node	**p, int x);
-
 
 void	bubble_sort(t_node	**list);
 void	fake_bubble_sort(t_node	**list);
 void	double_sort(t_node	**list_a, t_node	**list_b);
-void	merge_sort(t_node	**list_a, t_node	**list_b);
 void	radix_sort(t_node	**list_a, t_node	**list_b);
 void	three_values(t_node **list_a, t_node **list_b);
 void	five_values(t_node **list_a, t_node **list_b);

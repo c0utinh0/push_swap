@@ -6,7 +6,7 @@
 #    By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/08 16:32:52 by dcoutinh          #+#    #+#              #
-#    Updated: 2022/08/29 17:20:34 by dcoutinh         ###   ########.fr        #
+#    Updated: 2022/08/31 13:49:27 by dcoutinh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,6 @@ SRCS =  push_swap.c	\
 		utils/operations_b.c	\
 		utils/operations_ab.c	\
 		sorts/bubble_sort.c	\
-		sorts/merge_sort.c	\
 		sorts/radix_sort.c	\
 		sorts/three_values.c	\
 		sorts/five_values.c	\
@@ -42,7 +41,7 @@ all: $(NAME)
 
 $(NAME): $(SRC)
 	$(LIBFT)
-	$(CC) $(CFLAGS) $(SRCS) $(NAME) -g -o push_swap
+	$(CC) $(CFLAGS) $(SRCS) $(NAME) -o push_swap
 
 clean: 
 	rm -f $(OBJS)

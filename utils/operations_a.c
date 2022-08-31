@@ -6,12 +6,11 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 17:01:53 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/25 18:47:53 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/31 14:42:47 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-
 
 void	sa(t_node	**node)
 {
@@ -24,11 +23,11 @@ void	sa(t_node	**node)
 	node_a->next = node_b->next;
 	node_b->next = node_a;
 	write(1, "sa\n", 3);
-	}
+}
 
-	void	pa(t_node	**node_a, t_node	**node_b)
-	{
-		t_node	*node;
+void	pa(t_node	**node_a, t_node	**node_b)
+{
+	t_node	*node;
 
 	node = *node_b;
 	*node_b = (*node_b)->next;
@@ -66,31 +65,3 @@ void	rra(t_node	**list)
 	aux->next = NULL;
 	write(1, "rra\n", 4);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

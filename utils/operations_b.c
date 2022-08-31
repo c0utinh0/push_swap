@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 16:52:28 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/25 18:48:09 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/08/31 14:43:49 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ void	sb(t_node	**node)
 	node_a->next = node_b->next;
 	node_b->next = node_a;
 	write(1, "sb\n", 3);
-	}
+}
 
 void	pb(t_node	**node_a, t_node	**node_b)
-	{
-		t_node	*node;
+{
+	t_node	*node;
 
 	node = *node_a;
 	*node_a = (*node_a)->next;

@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 14:36:44 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/08/31 14:46:27 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/09/01 11:19:54 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,7 @@ void	ft_index_list(t_node **list)
 	}
 	aux = list;
 	fake_bubble_sort(tmp);
-	while (*tmp != NULL)
-	{
-		while (*aux != NULL)
-		{
-			if ((*aux)->data == (*tmp)->data)
-				(*aux)->index = index++;
-			aux = &(*aux)->next;
-		}
-		aux = (list);
-		tmp = &(*tmp)->next;
-	}
+	ft_index_list_comp(tmp, aux, list, &index);
 	ft_remove_list(t);
 }
 
@@ -93,7 +83,7 @@ int	ft_max_value(t_node **list)
 
 void	ft_concat(t_node **stack_a, t_node **stack_b)
 {
-    int	small;
+	int	small;
 	int	a_max;
 	int	len;
 
@@ -103,27 +93,7 @@ void	ft_concat(t_node **stack_a, t_node **stack_b)
 		small = (*stack_b)->data;
 	else
 		small = (*stack_a)->data;
-	while ((*stack_b) != NULL)
-	{
-		if ((*stack_a)->data < (*stack_b)->data)
-		{
-			if((*stack_b)->data > a_max)
-			{
-				a_max = (*stack_a)->data;
-				while ((*stack_a)->data != small)
-					ra(stack_a);
-				pa(stack_a, stack_b);
-				ra(stack_a);
-			}
-			else
-				ra(stack_a);
-		}
-        else
-		{
-            pa(stack_a, stack_b);
-			ra(stack_a);
-		}
-    }
-    while ((*stack_a)->data != small)
-            ra(stack_a);
+	ft_concat_comp(stack_a, stack_b, &a_max, &small);
+	while ((*stack_a)->data != small)
+		ra(stack_a);
 }

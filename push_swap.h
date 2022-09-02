@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 10:17:48 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/09/01 15:13:26 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/09/02 08:39:22 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ int		ft_check_duplicate(t_node **list);
 
 void	bubble_sort(t_node	**list);
 void	fake_bubble_sort(t_node	**list);
-void	double_sort(t_node	**list_a, t_node	**list_b);
 void	radix_sort(t_node	**list_a, t_node	**list_b);
 void	three_values(t_node **list_a, t_node **list_b);
 void	five_values(t_node **list_a, t_node **list_b);

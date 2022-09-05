@@ -6,13 +6,13 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 08:15:23 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/02 17:13:21 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/09/05 12:09:44 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_conversion(char *nptr, int i, int j)
+static long int	ft_conversion(char *nptr, int i, long int j)
 {
 	char	temp;
 
@@ -31,10 +31,10 @@ static int	ft_conversion(char *nptr, int i, int j)
 	return (j);
 }
 
-int	ft_atoi(const char *nptr)
+long int	ft_atoi(const char *nptr)
 {
-	size_t	i;
-	int		j;
+	size_t		i;
+	long int	j;
 
 	i = ft_strlen((const char *)nptr);
 	j = 0;

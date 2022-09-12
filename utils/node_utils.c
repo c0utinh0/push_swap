@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 17:09:04 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/09/12 09:06:50 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/09/12 14:29:22 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,19 +58,14 @@ int	ft_insert_args(t_node	**p, char	*argv[], int argc)
 	num = 0;
 	while (--argc != 0)
 	{
-		if (argv[argc][0] == '-')
-		{
-			if (!(ft_isdigit(argv[argc][1])))
-				return (0);
-		}
-		else if (!(ft_isdigit(argv[argc][0])))
-			return (0);
+		if (ft_check_arg(argv[argc]))
+			return (1);
 		num = ft_atoi(argv[argc]);
 		if (num > 2147483647)
-			return (0);
+			return (1);
 		ft_add_node(p, num);
 	}
-	return (1);
+	return (0);
 }
 
 void	ft_print_index(t_node	*p)

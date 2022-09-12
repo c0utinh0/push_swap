@@ -6,19 +6,18 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 08:14:36 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/09/01 16:02:23 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/09/12 08:24:16 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void	ft_option(char op, t_node **list_a, t_node **list_b)
+static void	ft_option(char op, t_node **list_a)
 {
 	if (op == 'a')
 	{
-		pb(list_a, list_b);
+		rra(list_a);
 		sa(list_a);
-		pa(list_a, list_b);
 	}
 	else if (op == 'b')
 	{
@@ -38,7 +37,7 @@ void	three_values(t_node **list_a, t_node **list_b)
 	data_b = (*list_a)->next->data;
 	data_c = (*list_a)->next->next->data;
 	if ((data_a < data_b) && (data_a < data_c) && (data_c < data_b))
-		ft_option('a', list_a, list_b);
+		ft_option('a', list_a);
 	if ((data_b < data_a) && (data_b < data_c))
 	{
 		if (data_a < data_c)
@@ -51,6 +50,6 @@ void	three_values(t_node **list_a, t_node **list_b)
 		if (data_a < data_b)
 			rra(list_a);
 		else
-			ft_option('b', list_a, list_b);
+			ft_option('b', list_a);
 	}
 }

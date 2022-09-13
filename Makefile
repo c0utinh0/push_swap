@@ -6,7 +6,7 @@
 #    By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/08 16:32:52 by dcoutinh          #+#    #+#              #
-#    Updated: 2022/09/12 09:41:13 by dcoutinh         ###   ########.fr        #
+#    Updated: 2022/09/13 10:10:22 by dcoutinh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ all: $(NAME)
 
 $(NAME): $(SRC)
 	$(LIBFT)
-	$(CC) $(CFLAGS) $(SRCS) $(NAME) -g -o push_swap
+	$(CC) $(CFLAGS) $(SRCS) $(NAME) -o push_swap
 
 clean: 
 	rm -f $(OBJS)
